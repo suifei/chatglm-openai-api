@@ -263,8 +263,8 @@ async def chat_completions(body: ChatBody, request: Request, background_tasks: B
     question = body.messages[-1]
     if question.role == 'user':
         question = question.content
-    else:
-        raise HTTPException(status.HTTP_400_BAD_REQUEST, "No Question Found")
+    #else:
+    #    raise HTTPException(status.HTTP_400_BAD_REQUEST, "No Question Found")
 
     history = []
     user_question = ''
